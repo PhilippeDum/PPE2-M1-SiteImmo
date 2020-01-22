@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
+    <title>Valbergh Immo / Alban - Valentin - Arnaud</title>
+    <link rel="stylesheet" href="../src/main.css">
+</head>
+<body>
+    <header>
+        <h1><a href="#">Valbergh Immo</a></h1>
+        <p><b>Agence immobilière</b> depuis 2020</p>
+    </header>
+
+    <nav>
+        <a href="../main.html">Accueil</a>
+        <a href="../maisons/maisons.html">Maisons</a>
+        <a class="active" href="appartements.html">Appartements</a>
+        <a href="../locaux/locaux.html">Locaux commerciaux</a>
+        <a href="../immeubles/immeubles.html">Immeubles</a>
+        <a href="../terrains/terrains.html">Terrains nus</a>
+        <a href="../acces.html">Accès</a>
+    </nav>
+
+
+
+
+
+
+
+    <!-- Zone de contenu principal -->
+    <div class="container">
+        <aside id="sideLeft">
+            <h2>Trier par</h2>
+            <p>Cherchez le bien qui correspond à vos critères</p>
+            <form action="#">
+                <h4>Type de bien :</h4>
+                    <input type="radio" name="bien" value="maison">Maison<br>
+                    <input type="radio" name="bien" value="appartement">Appartement<br>
+                    <input type="radio" name="bien" value="local_commercial">Local commercial<br>
+                    <input type="radio" name="bien" value="immeuble">Immeuble<br>
+                    <input type="radio" name="bien" value="terrain_nu">Terrain nu
+
+                <h4>Zone :</h4>
+                    <input type="radio" name="zone" value="centre_ville"> Centre-ville<br>
+                    <input type="radio" name="zone" value="residence"> Résidence<br>
+                    <input type="radio" name="zone" value="campagne"> Campagne
+
+                <h4>Superficie :</h4>
+                    Min : <input type="number" name="superficieMin" placeholder="Surface min">
+                    Max : <input type="number" name="superficieMax" placeholder="Surface max">
+
+                <h4>Nombre de pièces :</h4>
+                    Min : <input type="number" name="superficieMin" placeholder="Pièces min">
+                    Max : <input type="number" name="superficieMax" placeholder="Pièces max">
+
+                <h4>Nombre de chambres :</h4>
+                    Min : <input type="number" name="superficieMin" placeholder="Pièces min">
+                    Max : <input type="number" name="superficieMax" placeholder="Pièces max">
+
+                <h4>Prix :</h4>
+                    Min : <input type="number" name="superficieMin" placeholder="Prix min">
+                    Max : <input type="number" name="superficieMax" placeholder="Prix max">
+                  
+                <input type="reset" value="Annuler" style="background-color: #e74c3c;">
+                <input type="submit" value="Envoyer" style="background-color: #4CAF50;">
+            </form>
+        </aside>
+        <section>
+            <article>
+                <div class="flex">
+                    <img src="img/appartement2.jpg" alt="" id="imgBox">
+                    <div id="details">
+                        <h2>Appartement 2</h2>
+                        <p>Type : <span>x</span></p>
+                        <p>Zone : <span>x</span></p>
+                        <p>Superficie : <span>x</span> m²</p>
+                        <p>Nombre de pièces : <span>x</span></p>
+                        <p>Nombre de chambres : <span>x</span></p>
+                        <p>Prix : <span>x</span> €</p>
+                    </div>
+                </div>  
+                <div id="description">
+                    <h2>Description</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Nam eget volutpat ipsum, vel viverra tellus. Suspendisse a risus mi.
+                    Vestibulum sed justo consectetur, condimentum tellus non, sollicitudin risus. 
+                    Duis posuere ligula eget lectus malesuada euismod. Praesent posuere purus ac neque fermentum, 
+                    vel pellentesque sem finibus. Curabitur vel pellentesque erat, eu ornare orci. 
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Maecenas volutpat est porta varius aliquet. Sed tincidunt massa at lectus bibendum, 
+                    posuere dictum tortor semper. Donec sit amet condimentum elit. 
+                    Donec vehicula arcu a lacus porttitor rutrum. Fusce dictum turpis in felis convallis consequat. 
+                    Nam tempus tortor lorem, at auctor enim convallis sit amet. Sed at tincidunt ante, semper ultrices lorem.
+
+                    Pellentesque non elit lectus. Aenean ut pellentesque nisl. Nam sagittis quam convallis condimentum viverra. 
+                    Praesent sit amet sollicitudin urna. Nullam eleifend imperdiet nisl ac maximus. 
+                    Proin placerat felis neque, eleifend tempus tortor pretium ac. 
+                    Morbi tincidunt turpis a velit lobortis, et sagittis tortor rutrum. Nullam sagittis, 
+                    elit eu luctus cursus, nulla ante mattis orci, a faucibus dui neque vel neque. 
+                    Nulla orci urna, feugiat vitae elementum at, finibus non ipsum. Aliquam lacinia efficitur euismod. 
+                    Vestibulum interdum magna ut porttitor ullamcorper.
+                </div>
+            </article>
+        </section>
+
+        <aside id="sideRight">
+            <h2>Nous contacter</h2>
+            <p>Nous vous répondrons par téléphone si un numéro de téléphone a été saisi. Sinon vous recevrez un email de réponse.</p>
+            <form action="#">
+                <h4>Nom :</h4>
+                <input type="text" id="nom" name="nom" placeholder="Saisissez votre nom" required>
+
+                <h4>Prenom :</h4>
+                <input type="text" id="prenom" name="prenom" placeholder="Saisissez votre prénom" required>
+
+                <h4>Numéro de téléphone :</h4>
+                <input type="text" id="tel" name="tel" placeholder="Entrez votre numéro de téléphone (sans espace)">
+
+                <h4>Email :</h4>
+                <input type="text" id="email" name="email" placeholder="Entrez votre email" required>
+
+                <h4>Objet du message :</h4>
+                <input type="text" id="objet" name="objet" placeholder="Saisissez l'objet de votre demande" required>
+
+                <h4>Message :</h4>
+                <textarea name="txtAdresse" id="message" rows="4" cols="40" style="resize: none;" placeholder="Saisissez votre message" required></textarea>
+
+                <input type="reset" value="Annuler" style="background-color: #e74c3c;">
+                <input type="submit" value="Envoyer" style="background-color: #4CAF50;">
+            </form>
+        </aside>
+    </div>
+
+    <footer>
+        <h2 style="text-align: center;">Ou venez nous rendre visite !</h2>
+        <p> 28 rue des Immobilier, Roubaix</p>
+    </footer>
+</body>
+</html>

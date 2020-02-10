@@ -69,12 +69,11 @@
             </form>
         </aside>
         <section>
-            <article>
+            <article id="content">
                 <div class="flex">
                   <div class="carousel">
-                    <img src="http://placehold.it/1020x350/DD0048/fff?text=Slide1" class="slide active" id="img1">
-                    <img src="http://placehold.it/1020x350/05B8CC/fff?text=Slide2" class="slide" id="img2">
-                    <img src="http://placehold.it/1020x350/9077f2/fff?text=Slide3" class="slide" id="img3">
+                    <img src="img/immeuble2.jpg" class="slide active" id="img1">
+                    <img src="img/immeuble1.jpg" class="slide" id="img2">
                     <div class="controles">
                       <span class="left" onclick="goLeft()"><i class="fas fa-chevron-left"></i></span><!--
                     --><span class="right" onclick="goRight()"><i class="fas fa-chevron-right"></i></span>
@@ -112,6 +111,7 @@
                     Vestibulum interdum magna ut porttitor ullamcorper.
                 </div>
             </article>
+			<button onclick="generatePDF()">Download as PDF</button>
         </section>
 
         <aside id="sideRight">
@@ -149,5 +149,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/f0783caf8c.js" crossorigin="anonymous"></script>
     <script src="../main.js"></script>
+	<script src="../src/html2pdf.bundle.min.js"></script>
+    <script>
+        function generatePDF() {
+          // Choose the element that our invoice is rendered in.
+          const element = document.getElementById("content");
+          // Choose the element and save the PDF for our user.
+          html2pdf()
+            .from(element)
+            .save();
+        }
+    </script>
 </body>
 </html>

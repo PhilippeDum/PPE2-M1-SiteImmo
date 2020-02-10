@@ -103,7 +103,7 @@ form {
     margin-top: 15px;
     border-top: solid #333 1px;
     padding-top: 5px;
-    
+
 }
 form > h4 {
     padding: 10px 0px;
@@ -184,6 +184,8 @@ article {
     flex-wrap: wrap;
     padding: 20px;
     margin: 10px 0px;
+    border-bottom: solid 3px #E7DFDD;
+    border-radius: 15px;
 }
 
 article > div.flex {
@@ -267,4 +269,72 @@ footer {
     article > div.flex > div#details {
         margin-top: 10px;
     }
+}
+
+/*CAROUSEL*/
+
+.carousel img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    width: 512px;
+    height: 308px;
+}
+
+#img2 {
+  margin-top: -308px;
+}
+
+#img3 {
+  margin-top: -308px;
+}
+
+.carousel img.active {
+    z-index: 2;
+}
+
+.carousel .controles {
+    z-index: 3;
+    position: absolute;
+}
+
+.controles {
+    margin-top: -50px;
+    margin-left: 200px;
+}
+
+.carousel .controles span {
+    border: solid 3px #222;
+    color: #E7DFDD;
+    background-color: #222;
+    margin: 0px 10px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carousel .controles span:hover {
+    border: solid 3px #E7DFDD;
+    color: #222;
+    background-color: #E7DFDD;
+}
+
+button {
+  color: #E7DFDD;
+  background-color: #222;
+  border: solid 3px #E7DFDD;
+  border-radius: 15px;
+  height: 50px;
+  width: 15%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  border: solid 3px #E7DFDD;
+  color: #222;
+  background-color: #E7DFDD;
 }

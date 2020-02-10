@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
     <title>Valbergh Immo / Alban - Valentin - Arnaud</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../src/main.css">
+
 </head>
 <body>
     <header>
@@ -63,47 +65,58 @@
                 <h4>Prix :</h4>
                     Min : <input type="number" name="superficieMin" placeholder="Prix min">
                     Max : <input type="number" name="superficieMax" placeholder="Prix max">
-                  
+
                 <input type="reset" value="Annuler" style="background-color: #e74c3c;">
                 <input type="submit" value="Envoyer" style="background-color: #4CAF50;">
             </form>
         </aside>
-        <section>
-            <article>
-                <div class="flex">
-                    <img src="img/maison1.jpg" alt="" id="imgBox">
-                    <div id="details">
-                        <h2>Maison 1</h2>
-                        <p>Type : <span>x</span></p>
-                        <p>Zone : <span>x</span></p>
-                        <p>Superficie : <span>x</span> m²</p>
-                        <p>Nombre de pièces : <span>x</span></p>
-                        <p>Nombre de chambres : <span>x</span></p>
-                        <p>Prix : <span>x</span> €</p>
-                    </div>
-                </div>  
-                <div id="description">
-                    <h2>Description</h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Nam eget volutpat ipsum, vel viverra tellus. Suspendisse a risus mi.
-                    Vestibulum sed justo consectetur, condimentum tellus non, sollicitudin risus. 
-                    Duis posuere ligula eget lectus malesuada euismod. Praesent posuere purus ac neque fermentum, 
-                    vel pellentesque sem finibus. Curabitur vel pellentesque erat, eu ornare orci. 
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Maecenas volutpat est porta varius aliquet. Sed tincidunt massa at lectus bibendum, 
-                    posuere dictum tortor semper. Donec sit amet condimentum elit. 
-                    Donec vehicula arcu a lacus porttitor rutrum. Fusce dictum turpis in felis convallis consequat. 
-                    Nam tempus tortor lorem, at auctor enim convallis sit amet. Sed at tincidunt ante, semper ultrices lorem.
 
-                    Pellentesque non elit lectus. Aenean ut pellentesque nisl. Nam sagittis quam convallis condimentum viverra. 
-                    Praesent sit amet sollicitudin urna. Nullam eleifend imperdiet nisl ac maximus. 
-                    Proin placerat felis neque, eleifend tempus tortor pretium ac. 
-                    Morbi tincidunt turpis a velit lobortis, et sagittis tortor rutrum. Nullam sagittis, 
-                    elit eu luctus cursus, nulla ante mattis orci, a faucibus dui neque vel neque. 
-                    Nulla orci urna, feugiat vitae elementum at, finibus non ipsum. Aliquam lacinia efficitur euismod. 
-                    Vestibulum interdum magna ut porttitor ullamcorper.
-                </div>
+        <section>
+            <article id="content">
+                    <div class="flex">
+                        <div class="carousel">
+                          <img src="img/maison1.jpg" class="slide active" id="img1">
+                          <img src="img/maison2.jpg" class="slide" id="img2">
+                          <img src="img/maison3.jpg" class="slide" id="img3">
+                          <div class="controles">
+                            <span class="left" onclick="goLeft()"><i class="fas fa-chevron-left"></i></span><!--
+                          --><span class="right" onclick="goRight()"><i class="fas fa-chevron-right"></i></span>
+                          </div>
+                        </div>
+                        <div id="details">
+                            <h2>Maison 1</h2>
+                            <p>Type : <span>Maison</span></p>
+                            <p>Zone : <span>Centre-ville</span></p>
+                            <p>Superficie : <span>30</span> m²</p>
+                            <p>Nombre de pièces : <span>3</span></p>
+                            <p>Nombre de chambres : <span>1</span></p>
+                            <p>Prix : <span>120 000</span> €</p>
+                            <p class="text-primary">test</p>
+                        </div>
+                    </div>
+                    <div id="description">
+                        <h2>Description</h2>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nam eget volutpat ipsum, vel viverra tellus. Suspendisse a risus mi.
+                        Vestibulum sed justo consectetur, condimentum tellus non, sollicitudin risus.
+                        Duis posuere ligula eget lectus malesuada euismod. Praesent posuere purus ac neque fermentum,
+                        vel pellentesque sem finibus. Curabitur vel pellentesque erat, eu ornare orci.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Maecenas volutpat est porta varius aliquet. Sed tincidunt massa at lectus bibendum,
+                        posuere dictum tortor semper. Donec sit amet condimentum elit.
+                        Donec vehicula arcu a lacus porttitor rutrum. Fusce dictum turpis in felis convallis consequat.
+                        Nam tempus tortor lorem, at auctor enim convallis sit amet. Sed at tincidunt ante, semper ultrices lorem.
+
+                        Pellentesque non elit lectus. Aenean ut pellentesque nisl. Nam sagittis quam convallis condimentum viverra.
+                        Praesent sit amet sollicitudin urna. Nullam eleifend imperdiet nisl ac maximus.
+                        Proin placerat felis neque, eleifend tempus tortor pretium ac.
+                        Morbi tincidunt turpis a velit lobortis, et sagittis tortor rutrum. Nullam sagittis,
+                        elit eu luctus cursus, nulla ante mattis orci, a faucibus dui neque vel neque.
+                        Nulla orci urna, feugiat vitae elementum at, finibus non ipsum. Aliquam lacinia efficitur euismod.
+                        Vestibulum interdum magna ut porttitor ullamcorper.
+                    </div>
             </article>
+            <button id="pdf" onclick="generatePDF()">Download as PDF</button>
         </section>
 
         <aside id="sideRight">
@@ -138,5 +151,19 @@
         <h2 style="text-align: center;">Ou venez nous rendre visite !</h2>
         <p> 28 rue des Immobilier, Roubaix</p>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/f0783caf8c.js" crossorigin="anonymous"></script>
+    <script src="../main.js"></script>
+    <script src="../src/html2pdf.bundle.min.js"></script>
+    <script>
+        function generatePDF() {
+          // Choose the element that our invoice is rendered in.
+          const element = document.getElementById("content");
+          // Choose the element and save the PDF for our user.
+          html2pdf()
+            .from(element)
+            .save();
+        }
+    </script>
 </body>
 </html>
